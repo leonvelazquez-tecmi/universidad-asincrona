@@ -12,7 +12,7 @@ function ProgressBar({ value }) {
   )
 }
 
-export default function CareerOSDashboard({ onPausar }) {
+export default function CareerOSDashboard({ onPausar, onEmpezar }) {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
@@ -45,6 +45,7 @@ export default function CareerOSDashboard({ onPausar }) {
             </div>
           </div>
           <button
+            onClick={onEmpezar}
             className="w-full py-3.5 rounded-xl font-semibold text-white text-sm flex items-center justify-center gap-2"
             style={{ backgroundColor: '#00534C' }}
           >

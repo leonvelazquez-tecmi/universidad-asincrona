@@ -3,12 +3,14 @@ import CruceEntrada from './screens/CruceEntrada'
 import AristotelesChat from './screens/AristotelesChat'
 import CareerOSDashboard from './screens/CareerOSDashboard'
 import PausaIntencional from './screens/PausaIntencional'
+import MicroBloque from './screens/MicroBloque'
 
 const PANTALLAS = {
   ENTRADA: 'entrada',
   ARISTOTELES: 'aristoteles',
   DASHBOARD: 'dashboard',
   PAUSA: 'pausa',
+  MICROBLOQUE: 'microbloque',
 }
 
 export default function App() {
@@ -24,10 +26,16 @@ export default function App() {
           <AristotelesChat onContinuar={() => setPantalla(PANTALLAS.DASHBOARD)} />
         )}
         {pantalla === PANTALLAS.DASHBOARD && (
-          <CareerOSDashboard onPausar={() => setPantalla(PANTALLAS.PAUSA)} />
+          <CareerOSDashboard
+            onPausar={() => setPantalla(PANTALLAS.PAUSA)}
+            onEmpezar={() => setPantalla(PANTALLAS.MICROBLOQUE)}
+          />
         )}
         {pantalla === PANTALLAS.PAUSA && (
           <PausaIntencional onVolver={() => setPantalla(PANTALLAS.DASHBOARD)} />
+        )}
+        {pantalla === PANTALLAS.MICROBLOQUE && (
+          <MicroBloque onVolver={() => setPantalla(PANTALLAS.DASHBOARD)} />
         )}
       </div>
     </div>

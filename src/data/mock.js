@@ -45,3 +45,28 @@ export const usuario = {
     "Cuéntame más sobre la ruta",
   ],
 }
+
+export const microBloque = {
+  modulo: "Fundamentos de Python para Analistas",
+  numero: 1,
+  tiempoTotal: "18 min",
+  pasos: [
+    {
+      tipo: "lectura",
+      titulo: "¿Por qué Python y no Excel?",
+      contenido: "Ya sabes analizar datos. Ya sabes qué pregunta hacerle a un dataset. Lo que Python te da es escala y velocidad — lo que en Excel tarda 40 minutos de fórmulas anidadas, en Python son 3 líneas.\n\nNo vas a reemplazar tu intuición financiera. La vas a potenciar.",
+    },
+    {
+      tipo: "lectura",
+      titulo: "Tu primer concepto: variables",
+      contenido: "En Excel, una celda guarda un valor. En Python, una variable hace lo mismo — pero la puedes nombrar, reutilizar y operar con ella en cualquier parte del código.\n\nPiénsalo así:\n\n    ingresos = 150000\n    costos = 92000\n    margen = ingresos - costos\n\nLo que antes era =A1-B1, ahora tiene nombre. Eso cambia todo cuando el modelo crece.",
+    },
+    {
+      tipo: "quiz",
+      pregunta: "En el ejemplo anterior, ¿cuánto vale la variable 'margen'?",
+      opciones: ["58,000", "242,000", "92,000"],
+      correcta: 0,
+      explicacion: "Correcto. 150,000 − 92,000 = 58,000. Tu intuición financiera ya funciona en Python.",
+    },
+  ],
+}
