@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f8f9fa;
+  /* Corbel (institucional) con fallbacks cross-platform */
+  font-family: 'Corbel', 'Trebuchet MS', 'Gill Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+#root {
+  min-height: 100svh;
+}
