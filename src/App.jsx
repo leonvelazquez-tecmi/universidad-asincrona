@@ -4,6 +4,8 @@ import AristotelesChat from './screens/AristotelesChat'
 import CareerOSDashboard from './screens/CareerOSDashboard'
 import PausaIntencional from './screens/PausaIntencional'
 import MicroBloque from './screens/MicroBloque'
+import CierreDia from './screens/CierreDia'
+import BienvenidaDia2 from './screens/BienvenidaDia2'
 
 const PANTALLAS = {
   ENTRADA: 'entrada',
@@ -11,6 +13,8 @@ const PANTALLAS = {
   DASHBOARD: 'dashboard',
   PAUSA: 'pausa',
   MICROBLOQUE: 'microbloque',
+  CIERRE_DIA: 'cierre_dia',
+  DIA_2: 'dia_2',
 }
 
 export default function App() {
@@ -35,7 +39,16 @@ export default function App() {
           <PausaIntencional onVolver={() => setPantalla(PANTALLAS.DASHBOARD)} />
         )}
         {pantalla === PANTALLAS.MICROBLOQUE && (
-          <MicroBloque onVolver={() => setPantalla(PANTALLAS.DASHBOARD)} />
+          <MicroBloque
+            onVolver={() => setPantalla(PANTALLAS.DASHBOARD)}
+            onTerminarDia={() => setPantalla(PANTALLAS.CIERRE_DIA)}
+          />
+        )}
+        {pantalla === PANTALLAS.CIERRE_DIA && (
+          <CierreDia onRecordar={() => setPantalla(PANTALLAS.DIA_2)} />
+        )}
+        {pantalla === PANTALLAS.DIA_2 && (
+          <BienvenidaDia2 onContinuar={() => setPantalla(PANTALLAS.MICROBLOQUE)} />
         )}
       </div>
     </div>

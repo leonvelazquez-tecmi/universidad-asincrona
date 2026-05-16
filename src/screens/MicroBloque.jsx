@@ -127,7 +127,7 @@ function PasoQuiz({ paso, onTerminar }) {
   )
 }
 
-function PantallaCelebracion({ onVolver }) {
+function PantallaCelebracion({ onVolver, onTerminarDia }) {
   return (
     <div className="flex flex-col items-center justify-center flex-1 px-6 text-center">
       <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: '#f0fdf4' }}>
@@ -168,14 +168,21 @@ function PantallaCelebracion({ onVolver }) {
         Volver al dashboard
       </button>
 
-      <p className="text-xs text-gray-400 mt-4 font-heading font-bold" style={{ color: '#00534C', letterSpacing: '0.05em' }}>
+      <button
+        onClick={onTerminarDia}
+        className="w-full py-3 text-sm text-gray-400 font-medium mt-2"
+      >
+        Terminar por hoy
+      </button>
+
+      <p className="text-xs text-gray-400 mt-2 font-heading font-bold text-center" style={{ color: '#00534C', letterSpacing: '0.05em' }}>
         Está en ti.
       </p>
     </div>
   )
 }
 
-export default function MicroBloque({ onVolver }) {
+export default function MicroBloque({ onVolver, onTerminarDia }) {
   const [pasoActual, setPasoActual] = useState(0)
   const [terminado, setTerminado] = useState(false)
   const pasos = microBloque.pasos
@@ -189,7 +196,7 @@ export default function MicroBloque({ onVolver }) {
   if (terminado) {
     return (
       <div className="min-h-screen bg-white flex flex-col">
-        <PantallaCelebracion onVolver={onVolver} />
+        <PantallaCelebracion onVolver={onVolver} onTerminarDia={onTerminarDia} />
       </div>
     )
   }

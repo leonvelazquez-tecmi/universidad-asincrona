@@ -70,3 +70,46 @@ export const microBloque = {
     },
   ],
 }
+
+export const cierreDia = {
+  resumen: [
+    {
+      tipo: "agente",
+      texto: "Carlos, terminaste tu primer bloque del día. 18 minutos invertidos.",
+      delay: 0,
+    },
+    {
+      tipo: "agente",
+      texto: "Aprendiste la diferencia entre una celda de Excel y una variable de Python. Eso parece pequeño, no lo es. Es el primer cambio de modelo mental.",
+      delay: 900,
+    },
+    {
+      tipo: "agente",
+      texto: "Racha: 6 días. Tu progreso está guardado. Cuando regreses, continuamos exactamente aquí.",
+      delay: 1900,
+    },
+  ],
+  horaRecordatorio: "7:00 AM",
+}
+
+export const dia2 = {
+  saludo: [
+    {
+      tipo: "agente",
+      texto: "Buenos días, Carlos.",
+      delay: 0,
+    },
+    {
+      tipo: "agente",
+      texto: "Ayer definiste tu primera variable en Python. Hoy seguimos con tipos de datos — los bloques de construcción de cualquier modelo.",
+      delay: 900,
+    },
+    {
+      tipo: "agente",
+      texto: "4 minutos para leer, 2 para la pregunta. ¿Listo?",
+      delay: 1900,
+    },
+  ],
+  racha: 6,
+  badge: "Día 2 · Racha activa",
+}
